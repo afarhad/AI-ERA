@@ -1,0 +1,72 @@
+pytorch : 1.7.1
+graphic name : GeForce GTX 1080 Ti
+(13400, 6, 4)
+(13400,)
+x_train shape : (12060, 6, 4) (12060,)
+x_val shape : (1340, 6, 4) (1340,)
+x_test shape : (1340, 6, 4) (1340,)
+all SF(0-5) ratio : [2940, 1432, 2072, 2519, 1540, 2897]
+*****************************************************************
+train SF(0-5) ratio : [2646, 1289, 1865, 2267, 1386, 2607]
+valid SF(0-5) ratio : [294, 143, 207, 252, 154, 290]
+test SF(0-5) ratio : [294, 143, 207, 252, 154, 290]
+torch.Size([256, 6, 4]) torch.Size([256])
+device:  cuda:0
+model parameters MLP(
+  (fc_1): Linear(in_features=24, out_features=50, bias=True)
+  (fc_2): Linear(in_features=50, out_features=100, bias=True)
+  (fc_3): Linear(in_features=100, out_features=150, bias=True)
+  (fc_4): Linear(in_features=150, out_features=200, bias=True)
+  (fc_5): Linear(in_features=200, out_features=6, bias=True)
+  (relu): ReLU()
+)
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+            Linear-1                   [-1, 50]           1,250
+              ReLU-2                   [-1, 50]               0
+            Linear-3                  [-1, 100]           5,100
+              ReLU-4                  [-1, 100]               0
+            Linear-5                  [-1, 150]          15,150
+              ReLU-6                  [-1, 150]               0
+            Linear-7                  [-1, 200]          30,200
+              ReLU-8                  [-1, 200]               0
+            Linear-9                    [-1, 6]           1,206
+================================================================
+Total params: 52,906
+Trainable params: 52,906
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.02
+Forward/backward pass size (MB): 0.01
+Params size (MB): 0.20
+Estimated Total Size (MB): 0.23
+----------------------------------------------------------------
++-------------+------------+
+|   Modules   | Parameters |
++-------------+------------+
+| fc_1.weight |    1200    |
+|  fc_1.bias  |     50     |
+| fc_2.weight |    5000    |
+|  fc_2.bias  |    100     |
+| fc_3.weight |   15000    |
+|  fc_3.bias  |    150     |
+| fc_4.weight |   30000    |
+|  fc_4.bias  |    200     |
+| fc_5.weight |    1200    |
+|  fc_5.bias  |     6      |
++-------------+------------+
+Total Trainable Params: 52906
+Warning: module MLP is treated as a zero-op.
+MLP(
+  52.91 k, 100.000% Params, 13.54 MMac, 100.000% MACs, 
+  (fc_1): Linear(1.25 k, 2.363% Params, 307.25 KMac, 2.269% MACs, in_features=24, out_features=50, bias=True)
+  (fc_2): Linear(5.1 k, 9.640% Params, 1.28 MMac, 9.452% MACs, in_features=50, out_features=100, bias=True)
+  (fc_3): Linear(15.15 k, 28.636% Params, 3.84 MMac, 28.355% MACs, in_features=100, out_features=150, bias=True)
+  (fc_4): Linear(30.2 k, 57.082% Params, 7.68 MMac, 56.710% MACs, in_features=150, out_features=200, bias=True)
+  (fc_5): Linear(1.21 k, 2.280% Params, 307.21 KMac, 2.268% MACs, in_features=200, out_features=6, bias=True)
+  (relu): ReLU(0, 0.000% Params, 128.0 KMac, 0.945% MACs, )
+)
+
+MACS: 13.54 MMac, PARAMS: 52.91 k
+
