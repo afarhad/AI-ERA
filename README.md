@@ -1,6 +1,8 @@
 # AI-ERA
 To understand this code, please refer to our paper titled "AI-ERA: Artificial Intelligence-Empowered Resource Allocation for LoRa-Enabled IoT Applications," Link: https://ieeexplore.ieee.org/abstract/document/10050828.
 
+A. Farhad and J. -Y. Pyun, "AI-ERA: Artificial Intelligence-Empowered Resource Allocation for LoRa-Enabled IoT Applications," in IEEE Transactions on Industrial Informatics, doi: 10.1109/TII.2023.3248074.
+
 
 'main_code.py'
 
